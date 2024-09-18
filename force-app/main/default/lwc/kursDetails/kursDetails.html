@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Kurs Details" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <template if:true={hasData}>
+                <p><strong>Softwarelinks:</strong></p>
+                <p>{softwareLinks}</p>
+                
+                <p><strong>Arbeitsblätter:</strong></p>
+                <p>{arbeitsblaetter}</p>
+                
+                <p><strong>Bastelmaterial:</strong></p>
+                <p>{bastelmaterial}</p>
+                
+                <p><strong>Hardware:</strong></p>
+                <p>{hardware}</p>
+            </template>
+            <template if:true={hasError}>
+                <p>Error loading data.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
